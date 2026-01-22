@@ -4,8 +4,11 @@ from app.cinema.hall import CinemaHall
 from app.cinema.bar import CinemaBar
 
 
-def cinema_visit(customers: list[dict], hall_number: int,
-                 cleaner: str, movie: str) -> None:
+def cinema_visit(
+        customers: list[dict],
+        hall_number: int,
+        cleaner: str,
+        movie: str) -> None:
     hall = CinemaHall(hall_number)
     cleaning_staff = Cleaner(cleaner)
     customer_list = []
@@ -27,5 +30,9 @@ if __name__ == "__main__":
     hall_number = 5
     cleaner_name = "Anna"
     movie = "Madagascar"
-    cinema_visit(customers=customers, hall_number=hall_number,
-                 cleaner=cleaner_name, movie=movie)
+    cinema_visit(
+        customers=customers,
+        hall_number=hall_number,
+        cleaner=cleaner_name,
+        movie=movie
+    )
